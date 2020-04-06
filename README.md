@@ -123,12 +123,14 @@ Untuk membandingkan kecepatan pembacaan File Reader dan CSV to Spark dilakukan d
 ## Dataset Small:
 ![picture](/img/benchmark_small.PNG)
 catatan: KNIME perlu berkomunikasi dengan spark terlebih dahulu sehingga waktu eksekusi lebih lama dari yang seharusnya. Waktu eksekusi seharusnya adalah sebagai berikut:
-![picture](/img/benchmark_small_SparkUI.PNG)
+
+![picture](/img/benchmark_small_sparkUI.PNG)
 
 ## Dataset 25M:
 ![picture](/img/benchmark_big.PNG)
 catatan: KNIME perlu berkomunikasi dengan spark terlebih dahulu sehingga waktu eksekusi lebih lama dari yang seharusnya. Waktu eksekusi seharusnya adalah sebagai berikut:
-![picture](/img/benchmark_big_SparkUI.PNG)
+
+![picture](/img/benchmark_big_sparkUI.PNG)
 
 ## Kesimpulan:
 Untuk dataset kecil, CSV to Spark lebih lambat karena perlu dilakukan job assigment terlebih dahulu ke tiap-tiap executor yang akan melakukan task. Untuk dataset besar, CSV lebih cepat karena tugas dibagikan ke berbagai executor agar bisa dikerjakan secara parallel. 
